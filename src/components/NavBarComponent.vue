@@ -23,8 +23,12 @@ export default {};
             SHOP ALL
           </div>
         </router-link>
-        <div class="bestSelling">BEST SELLING</div>
-        <div class="collection">COLLECTION</div>
+        <router-link to="/best-selling">
+          <div class="bestSelling">BEST SELLING</div>
+        </router-link>
+        <router-link to="/collection">
+          <div class="collection">COLLECTION</div>
+        </router-link>
         <div class="aboutUs">ABOUT US</div>
       </div>
       <div

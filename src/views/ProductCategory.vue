@@ -7,37 +7,21 @@
       <div>
         <div class="menu-product w-[289px]">
           <h3 class="font-bold text-start text-[24px] text-[#383838]">
-            Shop All
+            Double Cleanse
           </h3>
           <div class="flex flex-col mt-10">
-            <select class="option-shop">
-              <option value="">Double-Cleanse</option>
+            <router-link to="/category">
+              <select class="option-shop">
+                <option value="product">Double Cleanse</option>
+                <option value="product">Face Scrubs</option>
+              </select>
+            </router-link>
+            <select class="mt-5 option-shop">
               <option value="">Cleansing Balms</option>
+              <option value="">Face Scrubs</option>
+            </select>
+            <select class="mt-5 option-shop">
               <option value="">Oil Cleansers</option>
-              <option value="">Water Cleansers</option>
-            </select>
-            <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
-              <option value="">Face Scrubs</option>
-            </select>
-            <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
-              <option value="">Face Scrubs</option>
-            </select>
-            <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
-              <option value="">Face Scrubs</option>
-            </select>
-            <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
-              <option value="">Face Scrubs</option>
-            </select>
-            <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
-              <option value="">Face Scrubs</option>
-            </select>
-            <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
               <option value="">Face Scrubs</option>
             </select>
           </div>
@@ -55,23 +39,23 @@
               <option value="">Water Cleansers</option>
             </select>
             <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
+              <option value="">Cleansing Balms</option>
               <option value="">Face Scrubs</option>
             </select>
             <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
+              <option value="">Oil Cleansers</option>
               <option value="">Face Scrubs</option>
             </select>
             <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
+              <option value="">Water Cleansers</option>
               <option value="">Face Scrubs</option>
             </select>
             <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
+              <option value="">Toners</option>
               <option value="">Face Scrubs</option>
             </select>
             <select class="mt-5 option-shop">
-              <option value="">Exfoliators</option>
+              <option value="">Eye Care</option>
               <option value="">Face Scrubs</option>
             </select>
             <select class="mt-5 option-shop">
@@ -97,16 +81,7 @@
         </div>
         <div
           class="grid w-full max-w-screen-lg grid-cols-3 gap-10 mx-auto my-10">
-          <div v-for="i in CartComponent" :key="i.CartComponent">
-            <CartComponent
-              :promotion="i.promotion"
-              :image="i.image"
-              :title="i.title"
-              :product="i.product"
-              :rating="i.rating"
-              :price="i.price" />
-          </div>
-          <div v-for="i in CartComponent" :key="i.CartComponent">
+          <div v-for="i in slicedCart" :key="i.CartComponent">
             <CartComponent
               :promotion="i.promotion"
               :image="i.image"
@@ -116,7 +91,6 @@
               :price="i.price" />
           </div>
         </div>
-
         <!-- pagenation -->
         <div>
           <div class="flex justify-center">
@@ -193,6 +167,7 @@ import NavBarComponentVue from "../components/NavBarComponent.vue";
 import CartComponent from "../components/CartComponent.vue";
 import {useProductStore} from "../stores/ProductStore";
 import {mapState} from "pinia";
+import {RouterLink} from "vue-router";
 
 export default {
   name: "ProductPage",
@@ -200,11 +175,14 @@ export default {
     FooterComponentVue,
     NavBarComponentVue,
     CartComponent,
-    ProductCategory,
+    RouterLink,
   },
 
   computed: {
     ...mapState(useProductStore, ["CartComponent"]),
+    slicedCart() {
+      return this.CartComponent.slice(0, 9);
+    },
   },
   setup() {
     const store = useProductStore();
@@ -225,7 +203,6 @@ export default {
 
 .option-shop {
   background-color: #fff;
-
   cursor: pointer;
 }
 </style>

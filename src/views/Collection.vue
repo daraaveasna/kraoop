@@ -7,7 +7,7 @@
       <div>
         <div class="menu-product w-[289px]">
           <h3 class="font-bold text-start text-[24px] text-[#383838]">
-            Shop All
+            COLLECTION
           </h3>
           <div class="flex flex-col mt-10">
             <router-link class="option-shop" to="/category">
@@ -182,7 +182,7 @@ export default {
   computed: {
     ...mapState(useProductStore, ["CartComponent"]),
     slicedCart() {
-      return this.CartComponent.slice(0, 9);
+      return this.CartComponent.slice(4, 12);
     },
   },
   setup() {

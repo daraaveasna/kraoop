@@ -14,7 +14,7 @@ export default {
       return this.CartComponent.slice(0, 4);
     },
     slicedCart2() {
-      return this.CartComponent.slice(2, 6);
+      return this.CartComponent.slice(6, 10);
     },
   },
   setup() {
@@ -130,13 +130,11 @@ export default {
         </div>
         <div class="flex items-center gap-5 mt-10 btn">
           <div class="shopNow">
-            <div class="button">
-              <button
-                type="button"
-                class="inline-flex items-center px-24 py-3 text-center text-sm font-semibold text-white bg-[#F5A3B7] border border-transparent rounded-lg gap-x-2 hover:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 dark:bg-[#F5A3B7] dark:text-white">
-                Shop now
-              </button>
-            </div>
+            <router-link
+              class="inline-flex items-center px-24 py-3 text-center text-sm font-semibold text-white bg-[#F5A3B7] border border-transparent rounded-lg gap-x-2 hover:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 dark:bg-[#F5A3B7] dark:text-white"
+              to="/product">
+              Shop now
+            </router-link>
           </div>
           <div class="ExplorMore">
             <button
@@ -209,11 +207,11 @@ export default {
         <div class="flex items-center gap-5 mt-10 btn">
           <div class="shopNow">
             <div class="button">
-              <button
-                type="button"
-                class="inline-flex items-center px-24 py-3 text-center text-sm font-semibold text-white bg-[#F5A3B7] border border-transparent rounded-lg gap-x-2 hover:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 dark:bg-[#F5A3B7] dark:text-white">
+              <router-link
+                class="inline-flex items-center px-24 py-3 text-center text-sm font-semibold text-white bg-[#F5A3B7] border border-transparent rounded-lg gap-x-2 hover:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 dark:bg-[#F5A3B7] dark:text-white"
+                to="/product">
                 Shop now
-              </button>
+              </router-link>
             </div>
           </div>
           <div class="ExplorMore">
