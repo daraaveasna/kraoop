@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-[80px] text-black bg-white navbar flex-row flex">
         <div 
-            class="navbar w-[1256px] h-[80px] flex justify-between items-center mx-auto flex-row">
+            class="navbar w-[1256px] h-[50px] flex justify-between items-center mx-auto flex-row">
             <div class="felx justify-items-start flex-row">
                 <div class="icon flex">
                     <img src="../assets/icons/arrowleft.svg" />
@@ -16,67 +16,50 @@
             </div>
         </div>
     </div>
+    <div class="felx justify-center items-center flex-row mx-28">
+        <div class="icon flex">
+            <div class="font-bold text-[#383838] text-[15px] m-2 mx-0">Information</div>
+            <img src="../assets/icons/arrowdropright.svg" />
+            <div class="text-[12px] m-2.5 mx-0">Shipping</div>
+        </div>
+    </div>
 
     <div class="flex mt-8 justify-center">
-        <div class="w-[804px] h-[865px] flex-col mr-5  bg-white">
+        <div class="w-[804px] h-[452px] flex-col mr-5  bg-white">
             
             <div class="flex-col pl-6 mt-6 pr-6">
 
-                <div class="flex justify-between">
-                    <div class="font-bold">
-                        <p> Contact Information</p>
-                    </div>
-                    
-                    <p>Do you already have an account? Log In</p>
-                </div>
-
                 <div class="mt-8">
-                    <input class="border w-[100%] p-2 rounded-md" type="text" placeholder="Email">
+                    <input class="border w-[100%] p-2 rounded-md" type="text" placeholder="Contact" on-ended="Change">
                 </div>
-
                 <div class="mt-8">
-                    <input class="mr-2 w-[20px] h-[20px]" type="checkbox" name="" id="">
-                    <span class="">Yes, I want subscribe to newsletter now</span>
+                    <input class="border w-[100%] p-2 rounded-md" type="text" placeholder="Ship to">
                 </div>
             </div>
 
             <div class="flex flex-col pl-6 mt-8 pr-6">
-               <h1>Delivery Method</h1>
+               <div class="font-bold">Shipping Method</div>
 
-                <div class="flex flex-col mt-4 ">
+                <div class="flex flex-col mt-4 justify-between ">
 
-                    <div class=""><input type="radio" name="" id="" > <span>Ship</span></div>
-                    <div class="mt-3"><input type="radio" name="" id="" > <span>Peck Up</span></div>
+                    <div class="flex "><input type="radio" name="" id="" >
+                        <span>Courier at home</span>
+                        <span>($5.00)</span>
+                    </div>
+                        <div class="flex justify-start mx-4 text-[12px]">Can be delivered today</div>
+                    
+                    <div class="mt-3"><input type="radio" name="" id="" >
+                        <span>Fast delivery by Nova pashta</span>
+                        <span>($2.00)</span>
+                        <div class="flex justify-start mx-4 text-[12px]">Will be delivered within one day</div>
+
+                    </div>
                 </div>
             </div>
-
-            <div class=" flex-col pl-6 mt-8 pr-6">
-                <h1> Shipping Address</h1>
-
-                <div class="mt-5">
-                    <input  class="border w-[49%] p-2 rounded-md" type="text" placeholder="First Name">
-                    <input class="border w-[49%] p-2 ml-3 rounded-md" type="text" placeholder="Last Name">
-                </div>
-
-                <div class="mt-5">
-                    <p class="text-[15px]">Country</p>
-                    <input class="border w-[100%] p-2 rounded-md" type="text" placeholder="Combodia">
-                </div>
-                
-                <input class="border w-[100%] p-2 rounded-md mt-5"  type="text" placeholder="Address">
-
-                <div class="mt-5">
-                    <input class="border w-[49%] p-2 rounded-md" type="text" placeholder="City">
-                    <input class="border w-[49%] p-2 rounded-md ml-3" type="text" placeholder="Postal Code">
-                </div>
-
-                <input class="border w-[100%] p-2 rounded-md mt-5"  type="text" placeholder="Phone">
-
-                <div class="mt-10">
-                    <input class="border w-[50%] p-2 rounded-md bg-[#F5A3B7] "  type="button" value="Continue To Shipping">
-                </div>
+            <div>
+                <button class="bg-pink-400 hover:bg-black text-white py-2 px-4 mx-10 m-10 rounded">Continue to Payment</button>
+                <a href="#" class="text-black-500 text-[12px] hover:text-black py-2 px-4">Return to Information</a>
             </div>
-
         </div>
 
         <div class="w-[392px] h-[538px] bg-white flex-col pl-6 pt-6 pr-6" >
@@ -157,10 +140,20 @@
                 </div>
             </div>
         </div>
-        <div class="mt-10 flex justify-between m-1">
-            <p>SUBTOTAL</p>
-            <P>$84.00</P>
-
+        <div class="mt-5">
+            <div class="text-[12px] flex justify-between m-1 ">
+                <p>SUBTOTAL</p>
+                <p>$84.00</p>
+            </div>
+            <div class="text-[12px] flex justify-between m-1">
+                <p>SHIPPING</p>
+                <p>$5.00</p>
+            </div>
+            <div class="text-[14px] font-blod flex justify-between m-1">
+                <p>ESTIMATED TOTAL</p>
+                <p>$89.00</p>
+            </div>
+            
         </div>
             
     </div>
