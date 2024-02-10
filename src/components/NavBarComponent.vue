@@ -45,12 +45,12 @@ export default {};
           </div>
           <div class="text">ACCOUNT</div>
         </div>
-        <div class="flex flex-col items-center justify-between gap-1 card">
+        <router-link to="/payment" ><div class="flex flex-col items-center justify-between gap-1 card">
           <div class="icon">
             <img src="../assets/icons/cart.svg" alt="card" />
           </div>
           <div class="text">CARD</div>
-        </div>
+        </div></router-link>
       </div>
     </div>
   </div>

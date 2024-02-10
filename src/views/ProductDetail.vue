@@ -144,7 +144,9 @@
                     Add to bag
                   </div>
                 </div>
-                <div class="relative w-5 h-4"></div>
+                <div class="relative w-5 h-4">
+                  <img src="../assets/icons/heart.svg" alt="favorite" />
+                </div>
               </div>
               <div class="flex flex-col items-start justify-start">
                 <div class="justify-start items-center gap-2.5 inline-flex">
